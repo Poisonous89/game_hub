@@ -15,6 +15,7 @@ namespace game_hub
         public MainMenu()
         {
             InitializeComponent();
+            this.KeyPreview = true;
         }
 
         private void button1_Click(object sender, EventArgs e) // back to log in button
@@ -51,6 +52,15 @@ namespace game_hub
         {
             new Game3().Show();
             this.Close();
+        }
+
+        private void MainMenu_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+                new Form1().Show();
+            }
         }
     }
 }

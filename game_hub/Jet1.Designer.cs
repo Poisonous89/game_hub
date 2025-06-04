@@ -31,15 +31,15 @@
             this.components = new System.ComponentModel.Container();
             this.txtScore = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.score_result = new System.Windows.Forms.Label();
+            this.enemyThree = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
             this.bullet = new System.Windows.Forms.PictureBox();
-            this.enemyThree = new System.Windows.Forms.PictureBox();
             this.enemyTwo = new System.Windows.Forms.PictureBox();
             this.enemyOne = new System.Windows.Forms.PictureBox();
-            this.score_result = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.enemyThree)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bullet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enemyThree)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemyTwo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemyOne)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +60,23 @@
             this.gameTimer.Interval = 20;
             this.gameTimer.Tick += new System.EventHandler(this.mainGameTimerEvent);
             // 
+            // score_result
+            // 
+            this.score_result.Location = new System.Drawing.Point(550, 17);
+            this.score_result.Name = "score_result";
+            this.score_result.Size = new System.Drawing.Size(238, 80);
+            this.score_result.TabIndex = 2;
+            // 
+            // enemyThree
+            // 
+            this.enemyThree.BackgroundImage = global::game_hub.Properties.Resources.enemy;
+            this.enemyThree.Location = new System.Drawing.Point(664, 62);
+            this.enemyThree.Name = "enemyThree";
+            this.enemyThree.Size = new System.Drawing.Size(100, 85);
+            this.enemyThree.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.enemyThree.TabIndex = 0;
+            this.enemyThree.TabStop = false;
+            // 
             // player
             // 
             this.player.BackgroundImage = global::game_hub.Properties.Resources.player;
@@ -79,16 +96,6 @@
             this.bullet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.bullet.TabIndex = 0;
             this.bullet.TabStop = false;
-            // 
-            // enemyThree
-            // 
-            this.enemyThree.BackgroundImage = global::game_hub.Properties.Resources.enemy;
-            this.enemyThree.Location = new System.Drawing.Point(664, 62);
-            this.enemyThree.Name = "enemyThree";
-            this.enemyThree.Size = new System.Drawing.Size(100, 85);
-            this.enemyThree.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.enemyThree.TabIndex = 0;
-            this.enemyThree.TabStop = false;
             // 
             // enemyTwo
             // 
@@ -111,13 +118,6 @@
             this.enemyOne.TabIndex = 0;
             this.enemyOne.TabStop = false;
             // 
-            // score_result
-            // 
-            this.score_result.Location = new System.Drawing.Point(550, 17);
-            this.score_result.Name = "score_result";
-            this.score_result.Size = new System.Drawing.Size(238, 80);
-            this.score_result.TabIndex = 2;
-            // 
             // Jet1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,12 +132,12 @@
             this.Controls.Add(this.enemyOne);
             this.Controls.Add(this.txtScore);
             this.Name = "Jet1";
-            this.Text = "Fighet Jet Shooting Game MOOI CT";
+            this.Text = "Jet game";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);
+            ((System.ComponentModel.ISupportInitialize)(this.enemyThree)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bullet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enemyThree)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemyTwo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemyOne)).EndInit();
             this.ResumeLayout(false);

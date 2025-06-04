@@ -157,7 +157,7 @@ namespace game_hub
 
             if (e.KeyCode == Keys.Escape)
             {
-                this.Hide();
+                this.Close();
                 new MainMenu().Show();
             }
         }

@@ -32,11 +32,11 @@
             this.m_Timer = new System.Windows.Forms.Timer(this.components);
             this.m_RestartBtn = new System.Windows.Forms.Button();
             this.scoreLbl = new System.Windows.Forms.Label();
+            this.score_result = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // m_Timer
             // 
-            this.m_Timer.Interval = INITIAL_INTERVAL;
             this.m_Timer.Tick += new System.EventHandler(this.OnTimerTick);
             // 
             // m_RestartBtn
@@ -62,18 +62,28 @@
             this.scoreLbl.TabIndex = 1;
             this.scoreLbl.Text = "Score : 0";
             // 
-            // Window
+            // score_result
+            // 
+            this.score_result.BackColor = System.Drawing.Color.Transparent;
+            this.score_result.Location = new System.Drawing.Point(780, 16);
+            this.score_result.Name = "score_result";
+            this.score_result.Size = new System.Drawing.Size(158, 52);
+            this.score_result.TabIndex = 3;
+            this.score_result.Text = " ";
+            // 
+            // Game3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 466);
+            this.Controls.Add(this.score_result);
             this.Controls.Add(this.scoreLbl);
             this.Controls.Add(this.m_RestartBtn);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Window";
+            this.Name = "Game3";
             this.ShowIcon = false;
-            this.Text = "Snake";
+            this.Text = "Snake game";
             this.Load += new System.EventHandler(this.Window_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.OnPaint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnKeyDown);
@@ -87,6 +97,7 @@
         private System.Windows.Forms.Timer m_Timer;
         private System.Windows.Forms.Button m_RestartBtn;
         private System.Windows.Forms.Label scoreLbl;
+        private System.Windows.Forms.Label score_result;
     }
 }
 

@@ -28,8 +28,11 @@ namespace game_hub
         private void Leaderboard_Load(object sender, EventArgs e)
         {
             cn = new SqlConnection(Session.Connect_String);
-
             cn.Open();
+            cmd = new SqlCommand(@"UPDATE data_hub SET total = ISNULL(game1, 0) + ISNULL(game2, 0) + ISNULL(game3, 0) + ISNULL(game4, 0)", cn);
+
+            cmd.ExecuteNonQuery();
+            
             firstPlace();
             getnames();
 
@@ -51,20 +54,20 @@ namespace game_hub
                     string topUsername = dr["username"].ToString();
                     int topScore = Convert.ToInt32(dr["total"]);
 
-                    first_place.Text = $"1st: {topUsername} - {topScore} pts";
+                    first_place.Text =  $"   {topUsername} {Environment.NewLine} {topScore} pts";
                 }
                 if (dr.Read()) 
                 {
                     string secondUsername = dr["username"].ToString();
                     int secondTotal = Convert.ToInt32(dr["total"]);
-                    second_place.Text = $"2nd: {secondUsername} - {secondTotal} pts";
+                    second_place.Text = $" {secondUsername} {Environment.NewLine} {secondTotal} pts";
                 }
 
                 if (dr.Read()) 
                 {
                     string thirdUsername = dr["username"].ToString();
                     int thirdTotal = Convert.ToInt32(dr["total"]);
-                    third_place.Text = $"3rd: {thirdUsername} - {thirdTotal} pts";
+                    third_place.Text = $"  {thirdUsername}  {Environment.NewLine} {thirdTotal} pts";
                 }
 
             }

@@ -160,6 +160,15 @@
     <Content Include="data_hub.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="data_hub_log.ldf">
+      <DependentUpon>data_hub.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\podium3.png" />
+    <None Include="Resources\podium2.png" />
+    <None Include="Resources\podium1.png" />
+    <None Include="Resources\podium.png" />
+    <None Include="Resources\Screenshot 2025-06-04 211019.png" />
     <None Include="Resources\baloongame.png" />
     <None Include="Resources\jetgame.png" />
     <None Include="Resources\boom.gif" />

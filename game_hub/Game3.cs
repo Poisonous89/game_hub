@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -8,6 +9,11 @@ namespace game_hub
 
     public partial class Game3 : Form
     {
+        SqlConnection cn;
+        SqlCommand cmd;
+        SqlDataAdapter da;
+        SqlDataReader dr;
+        int oldscore;
         private const int WIDTH = 42;
         private const int HEIGHT = 24;
         private const int INITIAL_INTERVAL = 250;
@@ -29,7 +35,7 @@ namespace game_hub
             m_Game = new Game(WIDTH, HEIGHT);
             m_Timer.Start();
         }
-
+        
         private void UpdateScore()
         {
             scoreLbl.Text = string.Format(SCORE_STRING, m_Game.GetScore());
@@ -46,6 +52,38 @@ namespace game_hub
             {
                 m_Timer.Stop();
                 m_RestartBtn.Enabled = true;
+
+                cn = new SqlConnection(Session.Connect_String);
+                cn.Open();
+
+                string query2 = "SELECT game3 FROM data_hub WHERE username = @username";
+                cmd = new SqlCommand(query2, cn);
+                cmd.Parameters.AddWithValue("@username", Session.LoggedUsername);
+
+                object result = cmd.ExecuteScalar();
+                int score = m_Game.GetScore();
+                if (result != DBNull.Value && result != null)
+                {
+                    oldscore = Convert.ToInt32(result);
+                }
+                else
+                {
+                    oldscore = 0; // default if there's no previous score
+                }
+
+                score_result.Text = "";
+
+                // Update the database only if new score is higher
+                if (score > oldscore)
+                {
+                    string query = "UPDATE data_hub SET game3 = @score WHERE username = @username";
+                    SqlCommand updateCmd = new SqlCommand(query, cn);
+                    updateCmd.Parameters.AddWithValue("@score", score);
+                    updateCmd.Parameters.AddWithValue("@username", Session.LoggedUsername);
+                    updateCmd.ExecuteNonQuery();
+                }
+
+                cn.Close();
             }
             Invalidate();
         }
@@ -73,6 +111,10 @@ namespace game_hub
                 case Keys.Down:
                     m_Game.ChangeSnakeDIrection(Direction.Down);
                     break;
+                case Keys.Escape:
+                    this.Close();
+                    new MainMenu().Show();
+                    break;
             }
         }
 
@@ -85,16 +127,21 @@ namespace game_hub
 
         private void OnRestartBtnClick(object sender, EventArgs e)
         {
+            int score = m_Game.GetScore();
+            score_result.Text += Environment.NewLine + "Staré skore: " + oldscore + Environment.NewLine + "Nové skore: " + score;
+            
             m_RestartBtn.Enabled = false;
             m_Game.Restart();
             UpdateScore();
             m_Timer.Interval = INITIAL_INTERVAL; 
             m_Timer.Start();
+            
         }
 
         private void Window_Load(object sender, EventArgs e)
         {
-
+            
+            
         }
     }
 }

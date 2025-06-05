@@ -12,7 +12,7 @@ namespace game_hub
         SqlConnection cn;
         SqlCommand cmd;
         
-        SqlDataReader dr;
+        
         int oldscore;
         private const int WIDTH = 42;
         private const int HEIGHT = 24;

@@ -173,7 +173,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>data_hub.mdf</DependentUpon>
     </Content>
-    <Content Include="JetBrains.ReSharper.2025.1.2.web.exe" />
     <Content Include="Resources\bg.png" />
     <None Include="Resources\pog.png" />
     <None Include="Resources\Screenshot 2025-06-05 191347.png" />

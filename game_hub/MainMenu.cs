@@ -22,7 +22,7 @@ namespace game_hub
         {
             new Form1().Show();
             this.Close();
-            MessageBox.Show(Session.LoggedUsername);
+            
         }
 
         private void button2_Click(object sender, EventArgs e) // jet game button

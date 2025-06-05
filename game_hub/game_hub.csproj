@@ -67,6 +67,9 @@
     <Compile Include="Baloon1.Designer.cs">
       <DependentUpon>Baloon1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class1.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

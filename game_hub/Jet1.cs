@@ -45,7 +45,6 @@ namespace game_hub
 
 
 
-            // player movement logic starts
 
             if(goLeft == true && player.Left > 0)
             {
@@ -55,7 +54,6 @@ namespace game_hub
             {
                 player.Left += playerSpeed;
             }
-            // player movement logic ends
 
             if(shooting == true)
             {
@@ -73,7 +71,7 @@ namespace game_hub
                 shooting = false;
             }
 
-            if(bullet.Bounds.IntersectsWith(enemyOne.Bounds)) //
+            if(bullet.Bounds.IntersectsWith(enemyOne.Bounds)) 
             {
                 score += 1;
                 enemyOne.Top = -450;
@@ -128,6 +126,14 @@ namespace game_hub
             {
                 goRight = true;
             }
+            if (e.KeyCode == Keys.A)
+            {
+                goLeft = true;
+            }
+            if (e.KeyCode == Keys.D)
+            {
+                goRight = true;
+            }
         }
 
         private void txtScore_Click(object sender, EventArgs e)
@@ -150,7 +156,15 @@ namespace game_hub
             {
                 goRight = false;
             }
-            if(e.KeyCode == Keys.Space && shooting == false)
+            if (e.KeyCode == Keys.A)
+            {
+                goLeft = false;
+            }
+            if (e.KeyCode == Keys.D)
+            {
+                goRight = false;
+            }
+            if (e.KeyCode == Keys.Space && shooting == false)
             {
                 shooting = true;
 

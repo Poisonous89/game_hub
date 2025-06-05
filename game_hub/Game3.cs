@@ -111,6 +111,18 @@ namespace game_hub
                 case Keys.Down:
                     m_Game.ChangeSnakeDIrection(Direction.Down);
                     break;
+                case Keys.A:
+                    m_Game.ChangeSnakeDIrection(Direction.Left);
+                    break;
+                case Keys.D:
+                    m_Game.ChangeSnakeDIrection(Direction.Right);
+                    break;
+                case Keys.W:
+                    m_Game.ChangeSnakeDIrection(Direction.Up);
+                    break;
+                case Keys.S:
+                    m_Game.ChangeSnakeDIrection(Direction.Down);
+                    break;
                 case Keys.Escape:
                     this.Hide();
                     new MainMenu().Show();

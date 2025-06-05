@@ -32,11 +32,11 @@
             this.third_place = new System.Windows.Forms.Label();
             this.second_place = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.button1 = new game_hub.RoundedButton();
+            this.button2 = new game_hub.RoundedButton();
+            this.button3 = new game_hub.RoundedButton();
+            this.button5 = new game_hub.RoundedButton();
+            this.button6 = new game_hub.RoundedButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();

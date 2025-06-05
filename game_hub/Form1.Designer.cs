@@ -6,7 +6,6 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -32,10 +31,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.username_input = new System.Windows.Forms.TextBox();
             this.password_input = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.register_button = new System.Windows.Forms.Button();
+            this.button1 = new game_hub.RoundedButton();
+            this.register_button = new game_hub.RoundedButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button2 = new game_hub.RoundedButton();
             this.SuspendLayout();
             // 
             // label1

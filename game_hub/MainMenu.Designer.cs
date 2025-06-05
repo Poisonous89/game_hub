@@ -28,38 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.button1 = new game_hub.RoundedButton();
+            this.button6 = new game_hub.RoundedButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button5 = new game_hub.RoundedButton();
+            this.button4 = new game_hub.RoundedButton();
+            this.button3 = new game_hub.RoundedButton();
+            this.button2 = new game_hub.RoundedButton();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.AutoSize = true;
             this.button1.BackColor = System.Drawing.Color.Linen;
+            this.button1.CornerRadius = 20;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.button1.Location = new System.Drawing.Point(582, 467);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 30);
+            this.button1.Size = new System.Drawing.Size(132, 32);
             this.button1.TabIndex = 0;
             this.button1.Text = "back to log in ->";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.NormalColor = System.Drawing.Color.Linen;
+            this.button1.HoverColor = System.Drawing.Color.FromArgb(169, 255, 169);
             // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.Linen;
+            this.button6.CornerRadius = 20;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button6.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.button6.Location = new System.Drawing.Point(533, 114);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(202, 50);
@@ -67,6 +75,8 @@
             this.button6.Text = "Leaderboard";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.NormalColor = System.Drawing.Color.Linen;
+            this.button6.HoverColor = System.Drawing.Color.FromArgb(169, 255, 169);
             // 
             // label1
             // 
@@ -129,6 +139,9 @@
             // 
             this.button5.BackgroundImage = global::game_hub.Properties.Resources.Screenshot_2025_06_05_191347;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.CornerRadius = 20;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.button5.Location = new System.Drawing.Point(250, 141);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(173, 156);
@@ -140,6 +153,9 @@
             // 
             this.button4.BackgroundImage = global::game_hub.Properties.Resources.pog;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.CornerRadius = 20;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.button4.Location = new System.Drawing.Point(250, 332);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(173, 156);
@@ -151,6 +167,9 @@
             // 
             this.button3.BackgroundImage = global::game_hub.Properties.Resources.Screenshot_2025_06_05_183444;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.CornerRadius = 20;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.button3.Location = new System.Drawing.Point(50, 332);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(173, 156);
@@ -161,7 +180,10 @@
             // button2
             // 
             this.button2.BackgroundImage = global::game_hub.Properties.Resources.jetgame;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.CornerRadius = 20;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.button2.Location = new System.Drawing.Point(50, 141);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(173, 156);
@@ -196,17 +218,16 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private RoundedButton button1;
+        private RoundedButton button2;
+        private RoundedButton button3;
+        private RoundedButton button4;
+        private RoundedButton button5;
+        private RoundedButton button6;
     }
 }

@@ -62,5 +62,16 @@ namespace game_hub
                 new Form1().Show();
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new xox().Show();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

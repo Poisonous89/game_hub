@@ -123,7 +123,8 @@ namespace game_hub
         //exit game
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+            new MainMenu().Show();
         }
 
         //new game

@@ -36,7 +36,7 @@
             this.SuspendLayout();
             // 
             // m_Timer
-            // 
+            this.m_Timer.Interval = INITIAL_INTERVAL;
             this.m_Timer.Tick += new System.EventHandler(this.OnTimerTick);
             // 
             // m_RestartBtn

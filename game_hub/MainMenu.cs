@@ -50,8 +50,8 @@ namespace game_hub
 
         private void button3_Click(object sender, EventArgs e)
         {
-            new Game3().Show();
             this.Close();
+            new Game3().Show();
         }
 
         private void MainMenu_KeyUp(object sender, KeyEventArgs e)

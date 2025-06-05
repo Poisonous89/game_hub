@@ -65,7 +65,7 @@ namespace game_hub
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Session.Connect_String = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mlich\source\repos\Poisonous89\game_hub\game_hub\data_hub.mdf;Integrated Security=True");
+            Session.Connect_String = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anony\source\repos\Poisonous89\game_hub\game_hub\data_hub.mdf;Integrated Security=True");
             
             cn = new SqlConnection(Session.Connect_String);
             
@@ -101,7 +101,7 @@ namespace game_hub
             dr.Close();
 
             // Register user
-            string insertQuery = "INSERT INTO data_hub (username, password, game1, game2, game3, total) VALUES (@username, @password, 0, 0, 0, 0, 0)";
+            string insertQuery = "INSERT INTO data_hub (username, password, game1, game2, game3, total) VALUES (@username, @password, 0, 0, 0, 0)";
             cmd = new SqlCommand(insertQuery, cn);
             cmd.Parameters.AddWithValue("@username", username);
             cmd.Parameters.AddWithValue("@password", password);

@@ -183,6 +183,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::game_hub.Properties.Resources.podium3;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox3.Location = new System.Drawing.Point(666, 365);
             this.pictureBox3.Name = "pictureBox3";
@@ -192,6 +193,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackgroundImage = global::game_hub.Properties.Resources.podium2;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.Location = new System.Drawing.Point(403, 361);
             this.pictureBox2.Name = "pictureBox2";
@@ -202,6 +204,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::game_hub.Properties.Resources.podium1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(519, 288);
             this.pictureBox1.Name = "pictureBox1";

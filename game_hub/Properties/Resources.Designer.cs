@@ -183,6 +183,16 @@ namespace game_hub.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pog {
+            get {
+                object obj = ResourceManager.GetObject("pog", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap redHeart {
             get {
                 object obj = ResourceManager.GetObject("redHeart", resourceCulture);

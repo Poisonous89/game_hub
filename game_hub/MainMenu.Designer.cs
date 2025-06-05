@@ -138,7 +138,7 @@
             // 
             // button4
             // 
-            this.button4.BackgroundImage = global::game_hub.Properties.Resources.bg;
+            this.button4.BackgroundImage = global::game_hub.Properties.Resources.pog;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Location = new System.Drawing.Point(250, 332);
             this.button4.Name = "button4";

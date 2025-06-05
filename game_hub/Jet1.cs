@@ -97,13 +97,24 @@ namespace game_hub
 
             if(score == 5)
             {
-                enemySpeed = 10;
+                enemySpeed = 8;
             }
             if(score == 10)
             {
+                enemySpeed = 10;
+            }
+            if (score == 15)
+            {
+                enemySpeed = 12;
+            }
+            if (score == 20)
+            {
+                enemySpeed = 13;
+            }
+            if (score == 25)
+            {
                 enemySpeed = 15;
             }
-
 
         }
 

@@ -8,8 +8,8 @@ namespace game_hub
     {
         SqlConnection cn;
         SqlCommand cmd;
-        SqlDataAdapter da;
-        SqlDataReader dr;
+        
+        
 
         bool goLeft, goRight, shooting, isGameOver;
         int score;
@@ -68,12 +68,12 @@ namespace game_hub
                 bulletSpeed = 0;
             }
 
-            if(bullet.Top < -30)
+            if(bullet.Top < 0)
             {
                 shooting = false;
             }
 
-            if(bullet.Bounds.IntersectsWith(enemyOne.Bounds))
+            if(bullet.Bounds.IntersectsWith(enemyOne.Bounds)) //
             {
                 score += 1;
                 enemyOne.Top = -450;
@@ -83,14 +83,14 @@ namespace game_hub
             if (bullet.Bounds.IntersectsWith(enemyTwo.Bounds))
             {
                 score += 1;
-                enemyTwo.Top = -650;
+                enemyTwo.Top = -450;
                 enemyTwo.Left = rnd.Next(20, 600);
                 shooting = false;
             }
             if (bullet.Bounds.IntersectsWith(enemyThree.Bounds))
             {
                 score += 1;
-                enemyThree.Top = -750;
+                enemyThree.Top = -450;
                 enemyThree.Left = rnd.Next(20, 600);
                 shooting = false;
             }
@@ -176,13 +176,13 @@ namespace game_hub
             }
             else
             {
-                oldscore = 0; // default if there's no previous score
+                oldscore = 0; // defaultné ak este nema ziadnu hodnotu
             }
 
             score_result.Text += Environment.NewLine + "Staré skore" + oldscore + Environment.NewLine + "Nové skore" + score;
 
 
-            // Step 2: Compare and update if needed
+            // porovnanie
             if (score > oldscore)
             {
                 string query = "UPDATE data_hub SET game1 = @score WHERE username = @username";

@@ -47,10 +47,9 @@
             // txtScore
             // 
             this.txtScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtScore.Location = new System.Drawing.Point(0, 341);
-            this.txtScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtScore.Location = new System.Drawing.Point(0, 277);
             this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(1064, 185);
+            this.txtScore.Size = new System.Drawing.Size(798, 150);
             this.txtScore.TabIndex = 1;
             this.txtScore.Text = "0";
             this.txtScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -58,22 +57,20 @@
             // 
             // gameTimer
             // 
-            this.gameTimer.Interval = 20;
+            this.gameTimer.Interval = 19;
             this.gameTimer.Tick += new System.EventHandler(this.mainGameTimerEvent);
             // 
             // score_result
             // 
-            this.score_result.Location = new System.Drawing.Point(733, 21);
-            this.score_result.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.score_result.Location = new System.Drawing.Point(550, 17);
             this.score_result.Name = "score_result";
-            this.score_result.Size = new System.Drawing.Size(317, 98);
+            this.score_result.Size = new System.Drawing.Size(238, 80);
             this.score_result.TabIndex = 2;
             // 
             // enemyThree
             // 
             this.enemyThree.BackgroundImage = global::game_hub.Properties.Resources.enemy;
-            this.enemyThree.Location = new System.Drawing.Point(885, 76);
-            this.enemyThree.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.enemyThree.Location = new System.Drawing.Point(664, 62);
             this.enemyThree.Name = "enemyThree";
             this.enemyThree.Size = new System.Drawing.Size(100, 85);
             this.enemyThree.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -83,8 +80,7 @@
             // player
             // 
             this.player.BackgroundImage = global::game_hub.Properties.Resources.player;
-            this.player.Location = new System.Drawing.Point(445, 694);
-            this.player.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.player.Location = new System.Drawing.Point(334, 564);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(110, 98);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -94,8 +90,7 @@
             // bullet
             // 
             this.bullet.BackgroundImage = global::game_hub.Properties.Resources.bullet;
-            this.bullet.Location = new System.Drawing.Point(631, 374);
-            this.bullet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bullet.Location = new System.Drawing.Point(473, 304);
             this.bullet.Name = "bullet";
             this.bullet.Size = new System.Drawing.Size(7, 27);
             this.bullet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -106,8 +101,7 @@
             // 
             this.enemyTwo.BackgroundImage = global::game_hub.Properties.Resources.enemy;
             this.enemyTwo.InitialImage = global::game_hub.Properties.Resources.enemy;
-            this.enemyTwo.Location = new System.Drawing.Point(445, 76);
-            this.enemyTwo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.enemyTwo.Location = new System.Drawing.Point(334, 62);
             this.enemyTwo.Name = "enemyTwo";
             this.enemyTwo.Size = new System.Drawing.Size(100, 85);
             this.enemyTwo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -117,8 +111,7 @@
             // enemyOne
             // 
             this.enemyOne.BackgroundImage = global::game_hub.Properties.Resources.enemy;
-            this.enemyOne.Location = new System.Drawing.Point(35, 76);
-            this.enemyOne.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.enemyOne.Location = new System.Drawing.Point(26, 62);
             this.enemyOne.Name = "enemyOne";
             this.enemyOne.Size = new System.Drawing.Size(100, 85);
             this.enemyOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -127,10 +120,10 @@
             // 
             // Jet1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1067, 830);
+            this.ClientSize = new System.Drawing.Size(800, 674);
             this.Controls.Add(this.enemyThree);
             this.Controls.Add(this.score_result);
             this.Controls.Add(this.player);
@@ -138,7 +131,6 @@
             this.Controls.Add(this.enemyTwo);
             this.Controls.Add(this.enemyOne);
             this.Controls.Add(this.txtScore);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Jet1";
             this.Text = "Jet game";
             this.Load += new System.EventHandler(this.Jet1_Load);

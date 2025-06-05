@@ -54,14 +54,7 @@ namespace game_hub
             new Game3().Show();
         }
 
-        private void MainMenu_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Escape)
-            {
-                this.Close();
-                new Form1().Show();
-            }
-        }
+        
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -72,6 +65,15 @@ namespace game_hub
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void MainMenu_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+                new Form1().Show();
+            }
         }
     }
 }

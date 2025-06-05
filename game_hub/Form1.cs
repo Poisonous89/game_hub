@@ -65,14 +65,14 @@ namespace game_hub
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Session.Connect_String = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anony\Downloads\game_hubber\game_hub\game_hub\data_hub.mdf;Integrated Security=True");
+            Session.Connect_String = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mlich\source\repos\Poisonous89\game_hub\game_hub\data_hub.mdf;Integrated Security=True");
             
             cn = new SqlConnection(Session.Connect_String);
             
             cn.Open();
             
             update();
-            Getnames();
+            //Getnames();
         }
 
         private void register_button_Click(object sender, EventArgs e)
@@ -101,7 +101,7 @@ namespace game_hub
             dr.Close();
 
             // Register user
-            string insertQuery = "INSERT INTO data_hub (username, password, game1, game2, game3, game4, total) VALUES (@username, @password, 0, 0, 0, 0, 0)";
+            string insertQuery = "INSERT INTO data_hub (username, password, game1, game2, game3, total) VALUES (@username, @password, 0, 0, 0, 0, 0)";
             cmd = new SqlCommand(insertQuery, cn);
             cmd.Parameters.AddWithValue("@username", username);
             cmd.Parameters.AddWithValue("@password", password);
@@ -110,26 +110,27 @@ namespace game_hub
 
             MessageBox.Show("Registered successfully as " + username);
 
-            this.Close();
+            this.Hide();
             new MainMenu().Show();
-            Getnames();
+            //Getnames();
         }
 
-        private void Getnames()
+        /*private void Getnames()
         {
             
-            cmd = new SqlCommand("Select * from data_hub", cn);
+            cmd = new SqlCommand("SELECT username AS [Logged users] FROM data_hub", cn);
             da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
             
         }
+        */
 
         private void update()
         {
             
-            cmd = new SqlCommand(@"UPDATE data_hub SET total = ISNULL(game1, 0) + ISNULL(game2, 0) + ISNULL(game3, 0) + ISNULL(game4, 0)", cn);
+            cmd = new SqlCommand(@"UPDATE data_hub SET total = ISNULL(game1, 0) + ISNULL(game2, 0) + ISNULL(game3, 0) ", cn);
             
             cmd.ExecuteNonQuery();
             

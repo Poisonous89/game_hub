@@ -153,16 +153,6 @@ namespace game_hub.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap podium {
-            get {
-                object obj = ResourceManager.GetObject("podium", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap podium1 {
             get {
                 object obj = ResourceManager.GetObject("podium1", resourceCulture);
@@ -213,9 +203,19 @@ namespace game_hub.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Screenshot_2025_06_04_211019 {
+        internal static System.Drawing.Bitmap Screenshot_2025_06_05_183444 {
             get {
-                object obj = ResourceManager.GetObject("Screenshot 2025-06-04 211019", resourceCulture);
+                object obj = ResourceManager.GetObject("Screenshot 2025-06-05 183444", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_06_05_191347 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2025-06-05 191347", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

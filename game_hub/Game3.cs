@@ -11,7 +11,7 @@ namespace game_hub
     {
         SqlConnection cn;
         SqlCommand cmd;
-        SqlDataAdapter da;
+        
         SqlDataReader dr;
         int oldscore;
         private const int WIDTH = 42;
@@ -20,7 +20,7 @@ namespace game_hub
         private const int MIN_INTERVAL = 80;
         private const int SPEED_INCREASE = 10;
         private const string SCORE_STRING = "Score: {0}";
-        private readonly Color m_BackgroundColor = Color.CornflowerBlue;
+        private readonly Color m_BackgroundColor = Color.FromArgb(128, 255, 255);
         private readonly Game m_Game;
         private readonly Bitmap m_GameField;
         private readonly Graphics m_GameGraphics;
@@ -112,7 +112,7 @@ namespace game_hub
                     m_Game.ChangeSnakeDIrection(Direction.Down);
                     break;
                 case Keys.Escape:
-                    this.Close();
+                    this.Hide();
                     new MainMenu().Show();
                     break;
             }

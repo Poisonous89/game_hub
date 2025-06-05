@@ -15,8 +15,7 @@ namespace game_hub
     {
         SqlConnection cn;
         SqlCommand cmd;
-        SqlDataAdapter da;
-        SqlDataReader dr;
+        
 
         int speed;
         int score;

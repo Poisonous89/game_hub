@@ -29,7 +29,7 @@ namespace game_hub
         {
             cn = new SqlConnection(Session.Connect_String);
             cn.Open();
-            cmd = new SqlCommand(@"UPDATE data_hub SET total = ISNULL(game1, 0) + ISNULL(game2, 0) + ISNULL(game3, 0) + ISNULL(game4, 0)", cn);
+            cmd = new SqlCommand(@"UPDATE data_hub SET total = ISNULL(game1, 0) + ISNULL(game2, 0) + ISNULL(game3, 0)", cn);
 
             cmd.ExecuteNonQuery();
             
@@ -74,7 +74,7 @@ namespace game_hub
         }
         private void getnames()
         {
-            cmd = new SqlCommand("Select username, game1 , game2, game3, game4, total from data_hub order by total DESC", cn);
+            cmd = new SqlCommand("Select username, game1 , game2, game3, total from data_hub order by total DESC", cn);
             da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -108,18 +108,11 @@ namespace game_hub
             dataGridView1.DataSource = dt;
         }
 
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-            cmd = new SqlCommand("Select username,game4 from data_hub order by game4 DESC", cn);
-            da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-        }
+        
 
         private void button5_Click(object sender, EventArgs e)
         {
-            cmd = new SqlCommand("Select username, game1 , game2, game3, game4, total from data_hub order by total DESC", cn);
+            cmd = new SqlCommand("Select username, game1 , game2, game3, total from data_hub order by total DESC", cn);
             da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);

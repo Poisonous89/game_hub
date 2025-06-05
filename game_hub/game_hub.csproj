@@ -174,11 +174,11 @@
       <DependentUpon>data_hub.mdf</DependentUpon>
     </Content>
     <Content Include="Resources\bg.png" />
+    <None Include="Resources\Screenshot 2025-06-05 191347.png" />
+    <None Include="Resources\Screenshot 2025-06-05 183444.png" />
     <None Include="Resources\podium3.png" />
     <None Include="Resources\podium2.png" />
     <None Include="Resources\podium1.png" />
-    <None Include="Resources\podium.png" />
-    <None Include="Resources\Screenshot 2025-06-04 211019.png" />
     <None Include="Resources\baloongame.png" />
     <None Include="Resources\jetgame.png" />
     <None Include="Resources\boom.gif" />
